@@ -15,7 +15,7 @@ void callScoreValidityRoute(const std::string &apiUrl)
     }
 
     // URL para a rota /score/validade
-    std::string url = apiUrl + "scores/validade";
+    std::string url = apiUrl + "scores/validate";
 
     curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
     curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 2L); // Tempo limite de conexão em segundos
@@ -38,7 +38,7 @@ int main()
     while (true)
     {
         // Verificar a validade do score a cada 3 segundos
-        std::cout << "Chamando a rota /score/validade..." << std::endl;
+        std::cout << "Chamando a rota /scores/validate..." << std::endl;
         
         callScoreValidityRoute(apiUrl);
 
